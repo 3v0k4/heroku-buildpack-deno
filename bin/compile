@@ -13,10 +13,6 @@ BP_DIR=$(cd "$(dirname "${0:-}")"; cd ..; pwd)
 HEROKU_DIR=$BUILD_DIR/.heroku
 BIN_DIR=$HEROKU_DIR/bin
 
-echo "HOME: $HOME"
-echo "BIN_DIR: $BIN_DIR"
-ls "$BIN_DIR"
-
 # To enable the local source build cache path, copy the files and match the build path with the startup path.
 cp -rpT $BUILD_DIR $HOME
 cd $HOME
@@ -39,6 +35,9 @@ echo 'export PATH="$HOME/.heroku/bin:$PATH"' >> $PROFILE_PATH
 echo 'export DENO_DIR="$HOME/.heroku/cache"' >> $PROFILE_PATH
 
 echo 'export PATH="$HOME/.heroku/bin:$PATH"' > "$BP_DIR/export"
+echo "HOME: $HOME"
+echo "BIN_DIR: $BIN_DIR"
+ls "$BIN_DIR"
 
 set +e
 
