@@ -34,7 +34,7 @@ mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$HOME/.heroku/bin:$PATH"' >> $PROFILE_PATH
 echo 'export DENO_DIR="$HOME/.heroku/cache"' >> $PROFILE_PATH
 
-echo \"export PATH="$BIN_DIR:xxx:$PATH"\" > "$BP_DIR/export"
+echo \"export PATH="$BIN_DIR:$PATH"\" > "$BP_DIR/export"
 echo "HOME: $HOME"
 echo "BIN_DIR: $BIN_DIR"
 ls "$BIN_DIR"
