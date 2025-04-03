@@ -35,7 +35,8 @@ echo 'export PATH="$HOME/.heroku/bin:$PATH"' >> $PROFILE_PATH
 echo 'export DENO_DIR="$HOME/.heroku/cache"' >> $PROFILE_PATH
 
 # echo \"export PATH="$BIN_DIR:$PATH"\" >> "$BP_DIR/export"
-echo \"export PATH="$BUILD_DIR/dd:$PATH"\" >> "$BP_DIR/export"
+# echo \"export PATH="$BUILD_DIR/dd:$PATH"\" >> "$BP_DIR/export"
+echo \"export PATH="/tmp:$PATH"\" >> "$BP_DIR/export"
 echo "BUILD_DIR: $BUILD_DIR"
 echo "BP_DIR: $BP_DIR"
 echo "HOME: $HOME"
