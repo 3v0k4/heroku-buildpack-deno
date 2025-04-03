@@ -36,8 +36,10 @@ echo 'export DENO_DIR="$HOME/.heroku/cache"' >> $PROFILE_PATH
 
 echo \"export PATH="$BIN_DIR:$PATH"\" > "$BP_DIR/export"
 echo "HOME: $HOME"
-ls "hhb: $HOME/.heroku/bin"
-ls "hhc: $HOME/.heroku/cache"
+echo "HOME/.heroku/bin"
+ls "$HOME/.heroku/bin"
+echo "HOME/.heroku/cache"
+ls "$HOME/.heroku/cache"
 echo "BIN_DIR: $BIN_DIR"
 ls "$BIN_DIR"
 
