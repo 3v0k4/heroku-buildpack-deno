@@ -32,6 +32,11 @@ mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$HOME/.heroku/bin:$PATH"' >> $PROFILE_PATH
 echo 'export DENO_DIR="$HOME/.heroku/cache"' >> $PROFILE_PATH
 
+# Provide deno to subsequent buildpacks:
+# https://devcenter.heroku.com/articles/buildpack-api#composing-multiple-buildpacks
+BP_DIR=$(cd "$(dirname "${0:-}")"; cd ..; pwd)
+echo "export PATH=\"$BIN_DIR:\$PATH"\" > "$BP_DIR/export"
+
 set +e
 
 # download dependencies
